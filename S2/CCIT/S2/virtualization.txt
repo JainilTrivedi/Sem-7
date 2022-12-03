@@ -1,0 +1,118 @@
+Virtualization : Seperating service from its underlying physical delivery
+
+Use specialized software to create a virtual or software created version of a computing resource.
+
+Multiple os and apps can run on a single machine and same hardware -> increases utilization of resources.
+
+Allows to share a single physical instance of resource or an application among multiple customers and organizations one at a time.
+
+Host machine and Guest Machine
+
+Benefits : 
+1) Flexible and efficient allocation of resources 
+2) Remote access 
+3) lowers cost of IT infra.
+4) Run multiple OS.
+5) Pay as you use.
+
+Draw diagram 
+Server Hardware -> Host OS -> Hypervisor -> Guest OS -> binaries/libs -> App
+
+
+Types of virtualization (ANDSSD)
+
+1) Application -> Remote Access
+2) Network -> Ability to run multiple virtual networks with seperate control and data plan.Facility to create and provision virtual networks - logical switches,VPN,workload security.
+3) Desktop -> Allow user's OS to be stored on a server remotely.Allows users to access the desktop remotely.
+4) Storage -> Array of servers that are managed by a virtual storage system.Servers are not aware of exactly where their data is stored.Managing storage from multiple sources to be managed and utilized from a single repository.
+5) Server -> Masking of server resources.Central server is divided into multiple different virtual servers by changing identity numbers.
+6) Data -> Data from multiple various sources is collected and managed at a single place without knowing technical details of how data is fetched,stored so that stakeholders can access easily.
+
+
+Uses of virtualization 
+
+1) Application testing : Allows software developers to test applications in multiple environments without setting up different computers.
+
+2) Server Consolidation : Instead of maintaing multiple servers with unique functions,server virtualization allows to split a single's servers resources for multiple purposes.
+
+
+Hypervisor -> Software installed on top of hardware that creates virtualization layer.
+
+Types of Hypervisor  
+1) Type1 (Baremetal) -> Lightweight OS and runs directly on the host's hardware.Virtualization software is directly installed on the hardware where OS is installed.
+Type1 better than type 2.
+2) Type2 (Hosted)-> Run on top of host OS.Additional OS can be installed on top of hypervisor.
+Latency higher than type 1.
+Also called as client hypervisor because most often used with end users and software testing,where high latency is not much of a concern.
+
+
+How hypervisor works?
+-> Support the creation and management of virtual machines by abstracting a computer's software from it's hardware.
+-> Hypervisors make virtualization possible by translating request between the physical and virtual resources.
+
+
+Hypervisor vs Container
+
+Hypervisor help in creation and management of VM whereas Containers just package up an app and its related services.This makes them more lightweight and portable.
+
+Hypervisor 
+1) Allow an OS to run independently from underlying hardware by using VM's
+2) Share virtual computing,storage and memory resources.
+3) Can run multiple OS on top of 1 server.
+
+Containers
+1) Containers are packages of software that contain all of the necessary elements to run in any environment.
+2) Allow apps to run independently of OS
+3) Highly portable
+
+
+
+Load Balancing 
+
+-> Method of splitting workloads and computing properties in cloud computing.
+-> Divide workload among numerous servers,networks and computers.
+
+Cloud load balancing -> Software based approach instead of a hardware based approach.
+
+2 Solutions to overcome overloading 
+1) Vertical scaling (Single server)
+2) Horizontal scaling (Multiple servers)
+
+2 types of load balancer 
+1) Software based -> Run on standard hardware like PC and OS 
+2) Hardware based -> Dedicated hardware boxes having Application Specific Integrated Circuit (ASIC)
+
+Algorithms in load balancing
+
+1) Static 
+-> Very little load variation
+-> Entire traffic divided between servers equally.
+-> Require indepth knowledge of server resources.
+-> load shifting does not depend on the current state of the system.
+
+2) Dynamic
+-> Find the server with the lighest load and give it priority
+-> Requires real time communication with the network 
+
+3) Round robin
+-> Randomly choose first node and assign the tasks to all the nodes in a round robin manner.
+
+4) Oppurtunistic load balancing 
+-> Allows each node to be busy.
+
+Types of load balancing
+
+1) Network load balancing
+-> Takes advantage of network layer information and decides where the traffic should be sent.
+-> Accomplished through layer 4 load balancing by handling TCP/UDP traffic
+-> Fastest local load balancing solution but cannot balance traffic distribution across servers
+
+2) HTTPS load balancing
+-> layer 7
+-> Most flexible type
+-> Take delivery decision based on information retrieved from HTTP Address.
+
+
+3) Internal load balancing
+-> Very much similar to network load balancing but leveraged to balance the infrastructure internally.
+
